@@ -3,7 +3,7 @@ var req = null;
 try { req = new XMLHttpRequest(); } catch(e) {}
 if (!req) try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch(e) {}
 if (!req) try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch(e) {}
-req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/detailUsers', false);
+req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/detailUser', false);
 req.send(null);
 //console.log("1." + req.responseText);
 if(req.responseText){
