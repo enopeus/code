@@ -18,4 +18,4 @@ req.send(null);
 }
 }
 }
-test(luke);
+test("luke");
