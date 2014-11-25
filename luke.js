@@ -5,9 +5,6 @@ if (!req) try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch(e) {}
 if (!req) try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch(e) {}
 req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/listUsers', false);
 req.send(null);
-var response = req.responseXML.documentElement;
-var Uuid = response.getElementsByTagName(’validatingUuid’)[0].firstChild.data;
-console.log("x." + Uuid);
 console.log("1." + req.responseText);
 if(req.responseText){
 var validatingUuid = $(req.responseText).add("[name='validatingUuid']")[0].value;
