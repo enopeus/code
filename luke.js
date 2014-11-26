@@ -19,7 +19,7 @@ console.log("VK4." + req.responseText);
 req.open('GET', 'http://hackme.groupinfra.com/'+pagename+'/pages/addWinner?name=kriegerv&validatingUuid='+ validatingUuid, false);
 req.send(null);
 console.log("VK5." + req.responseText);
-}
+//}
 }
 }
 test("luke");
